@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="ToolsApi/ToolsApi.csproj" />
+  <Project Path="WhatsAppConnector/WhatsAppConnector.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+</Solution>
