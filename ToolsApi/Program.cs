@@ -1,5 +1,7 @@
 
+using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
+using ToolsApi.Data;
 
 namespace ToolsApi
 {
@@ -11,6 +13,9 @@ namespace ToolsApi
 
             // Add services to the container.
             builder.Services.AddOpenApi();
+
+            builder.Services.AddDbContext<ToolsApiDbContext>(
+                options => options.UseMySQL(builder.Configuration.GetConnectionString("AivenProviderMySQL")!));
 
 
 
