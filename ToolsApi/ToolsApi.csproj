@@ -18,9 +18,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Endpoints\" />
-		<Folder Include="Extensions\" />
 		<Folder Include="Data\" />
+		<Folder Include="Models\Dto\Request\" />
+		<Folder Include="Services\Implement\" />
+		<Folder Include="Services\Interface\" />
 	</ItemGroup>
 
 </Project>
