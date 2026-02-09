@@ -1,6 +1,8 @@
 ﻿using System.Net;
 using System.Net.WebSockets;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using ToolsApi.Models.Dto.Response;
 using ToolsApi.WebSockets.Services.Interface;
 
 namespace ToolsApi.WebSockets.Endpoints
@@ -14,7 +16,7 @@ namespace ToolsApi.WebSockets.Endpoints
                 [FromServices] ILogger<Program> logger,
                 [FromServices] IEchoService echoService) =>
             {
-                logger.LogInformation("berak");
+                logger.LogInformation("koneksi baru websocket");
 
                 if (!context.WebSockets.IsWebSocketRequest)
                     throw new WebSocketException("upgrade protokol ke websocket");

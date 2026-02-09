@@ -7,8 +7,5 @@ namespace ToolsApi.WebSockets.Services.Interface
         public Task HandshakeAsync(WebSocket webSocket);
 
         public Task EchoAsync();
-
-        public Task CloseSuggestAsync();
-
     }
 }
