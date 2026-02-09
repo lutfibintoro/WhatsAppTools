@@ -11,6 +11,7 @@ namespace ToolsApi.Extensions
 
             // websocket endpoint
             app.MapEchoEndpoints();
+            app.MapFileTransitionEndpoints();
 
             return app;
         }
