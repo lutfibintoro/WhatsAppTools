@@ -76,6 +76,9 @@ namespace ToolsApi.Controllers
             if (ex is ArgumentException)
                 return BadRequest(errorResponseDto);
 
+            if (ex is BadHttpRequestException)
+                return BadRequest(errorResponseDto);
+
             return StatusCode(StatusCodes.Status500InternalServerError, errorResponseDto);
         }
     }
