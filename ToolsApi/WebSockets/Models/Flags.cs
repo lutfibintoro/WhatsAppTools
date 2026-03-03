@@ -3,8 +3,9 @@
     public enum Flags
     {
         Handshake,
-        HandshakeResume,
         Append,
-        End
+        End,
+        InitOperation,
+        InitResumeOperation
     }
 }
