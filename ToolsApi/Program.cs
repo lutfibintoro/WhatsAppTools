@@ -22,7 +22,7 @@ namespace ToolsApi
                 options => options.UseMySQL(builder.Configuration.GetConnectionString("AivenProviderMySQL")!));
 
 
-
+            
 
 
             WebApplication app = builder.Build();
@@ -42,6 +42,8 @@ namespace ToolsApi
 
             app.UseHttpsRedirection();
             app.UseRouting();
+
+            app.UseRateLimiter();
 
             app.UseWebSockets(new WebSocketOptions() { KeepAliveInterval = TimeSpan.FromMinutes(2) });
             app.MapControllers();
